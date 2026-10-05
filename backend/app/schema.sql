@@ -107,22 +107,20 @@ CREATE TABLE IF NOT EXISTS clause_themes (
 );
 CREATE INDEX IF NOT EXISTS idx_clause_themes_run ON clause_themes(run_id, theme);
 
--- ---------------------------------------------------------------- Phase 3: sentiment
--- Each clause gets one sentiment label per model run so "clear but too fast"
--- is not flattened into a single overall opinion.
+-- ------------------------------------------------------------- Phase 3: sentiment
 CREATE TABLE IF NOT EXISTS sentiment_runs (
     id         INTEGER PRIMARY KEY,
     method     TEXT NOT NULL,                  -- lexicon | vader | transformer
     created_at TEXT NOT NULL DEFAULT (datetime('now')),
     n_clauses  INTEGER NOT NULL,
-    params     TEXT                            -- JSON
+    params     TEXT
 );
 
 CREATE TABLE IF NOT EXISTS clause_sentiment (
     clause_id INTEGER NOT NULL REFERENCES clauses(id) ON DELETE CASCADE,
     run_id    INTEGER NOT NULL REFERENCES sentiment_runs(id) ON DELETE CASCADE,
-    label     TEXT NOT NULL CHECK (label IN ('positive', 'neutral', 'negative')),
-    score     REAL,
+    label     TEXT NOT NULL CHECK (label IN ('positive','neutral','negative')),
+    score     REAL NOT NULL,                   -- -1 (very negative) .. +1 (very positive)
     PRIMARY KEY (clause_id, run_id)
 );
 CREATE INDEX IF NOT EXISTS idx_clause_sentiment_run ON clause_sentiment(run_id, label);

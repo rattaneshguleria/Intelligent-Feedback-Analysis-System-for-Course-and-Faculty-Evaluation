@@ -44,7 +44,7 @@ NEGATORS = {"not", "no", "never", "without", "hardly", "barely", "nothing", "can
             "lack", "lacked", "lacking", "lacks"}
 HARD_TO = {"hard", "difficult", "unable"}
 INTENSIFIERS = {"very": 1.3, "really": 1.3, "extremely": 1.5, "so": 1.2, "highly": 1.3,
-               "quite": 1.1, "super": 1.4, "absolutely": 1.5, "always": 1.2, "way": 1.3}
+                "quite": 1.1, "super": 1.4, "absolutely": 1.5, "always": 1.2, "way": 1.3}
 DAMPENERS = {"sometimes": 0.2, "occasionally": 0.3, "rarely": 0.3}
 NEUTRALIZERS = {"average", "okay", "ok", "moderate", "standard", "normal"}
 PHRASES = {"out of syllabus": -2.0, "just right": 2.5, "out of date": -2.0}
@@ -72,7 +72,7 @@ def lexicon_score(text: str) -> tuple[str, float]:
             continue
         nxt = toks[i + 1] if i + 1 < len(toks) else ""
         val = LEXICON.get(tok, 0.0)
-        if tok == "too" and nxt:  # "too fast", "too many", "too tight"
+        if tok == "too" and nxt:                 # "too fast", "too many", "too tight"
             neg_sum += -2.0
             skip = True
             continue
@@ -85,21 +85,18 @@ def lexicon_score(text: str) -> tuple[str, float]:
         else:
             neg_sum += val
         if _is_negator(tok) or (tok in HARD_TO and nxt == "to"):
-            neg_left = NEG_WINDOW + 1  # +1 because this token also decrements
+            neg_left = NEG_WINDOW + 1               # +1 because this token also decrements
         neg_left = max(0, neg_left - 1)
 
     for phrase, v in PHRASES.items():
         if phrase in low:
-            if v > 0:
-                pos_sum += v
-            else:
-                neg_sum += v
+            (pos_sum, neg_sum) = (pos_sum + v, neg_sum) if v > 0 else (pos_sum, neg_sum + v)
 
-    if re.search(r"\bsome\b.*\bsome\b", low):  # "some were clear and some were not"
+    if re.search(r"\bsome\b.*\bsome\b", low):        # "some were clear and some were not"
         return NEU, 0.0
     total = pos_sum + neg_sum
     if pos_sum > 0 and neg_sum < 0 and min(pos_sum, -neg_sum) / max(pos_sum, -neg_sum) >= 0.6:
-        total *= 0.3  # genuinely mixed clause
+        total *= 0.3                                  # genuinely mixed clause
     damp = [DAMPENERS[t] for t in toks if t in DAMPENERS]
     if damp:
         total *= min(damp)

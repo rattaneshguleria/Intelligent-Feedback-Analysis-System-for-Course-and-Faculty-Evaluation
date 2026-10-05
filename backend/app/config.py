@@ -13,6 +13,11 @@ MIN_GROUP_SIZE = int(os.getenv("MIN_GROUP_SIZE", "5"))
 # Comments shorter than this (in words) carry no usable signal and are skipped.
 MIN_COMMENT_WORDS = int(os.getenv("MIN_COMMENT_WORDS", "3"))
 
+# Report thresholds, on "net sentiment" (share positive minus share negative, -1..+1).
+# Using shares instead of raw model scores keeps the thresholds valid for every method.
+STRENGTH_THRESHOLD = float(os.getenv("STRENGTH_THRESHOLD", "0.25"))
+CONCERN_THRESHOLD = float(os.getenv("CONCERN_THRESHOLD", "-0.25"))
+
 
 def get_salt() -> bytes:
     """Secret used to hash respondent ids.
