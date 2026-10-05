@@ -1,15 +1,9 @@
-# Python
-venv/
-.venv/
 __pycache__/
 *.pyc
-
-# Environment
+venv/
+.venv/
 .env
-
-# IDE
-.vscode/
-
-# OS
-.DS_Store
-Thumbs.db
+data/.salt
+data/*.db
+data/annotation_sample.csv
+data/reports/

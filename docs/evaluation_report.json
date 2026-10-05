@@ -1,0 +1,392 @@
+{
+  "gold_source": "synthetic ground truth",
+  "gold_clauses": 2252,
+  "total_clauses": 2320,
+  "theme_runs": [
+    {
+      "n": 2252,
+      "accuracy": 0.934,
+      "macro_f1": 0.957,
+      "weighted_f1": 0.961,
+      "per_class": {
+        "pace": {
+          "precision": 1.0,
+          "recall": 0.892,
+          "f1": 0.943,
+          "support": 295
+        },
+        "clarity": {
+          "precision": 1.0,
+          "recall": 0.998,
+          "f1": 0.999,
+          "support": 402
+        },
+        "support": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 269
+        },
+        "workload": {
+          "precision": 1.0,
+          "recall": 0.985,
+          "f1": 0.992,
+          "support": 265
+        },
+        "assessment": {
+          "precision": 1.0,
+          "recall": 0.808,
+          "f1": 0.894,
+          "support": 286
+        },
+        "engagement": {
+          "precision": 1.0,
+          "recall": 0.948,
+          "f1": 0.973,
+          "support": 328
+        },
+        "resources": {
+          "precision": 1.0,
+          "recall": 0.826,
+          "f1": 0.905,
+          "support": 213
+        },
+        "overall": {
+          "precision": 0.918,
+          "recall": 0.985,
+          "f1": 0.95,
+          "support": 194
+        },
+        "other": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0
+        }
+      },
+      "confusion": {
+        "pace": {
+          "pace": 263,
+          "clarity": 0,
+          "support": 0,
+          "workload": 0,
+          "assessment": 0,
+          "engagement": 0,
+          "resources": 0,
+          "overall": 0,
+          "other": 32
+        },
+        "clarity": {
+          "pace": 0,
+          "clarity": 401,
+          "support": 0,
+          "workload": 0,
+          "assessment": 0,
+          "engagement": 0,
+          "resources": 0,
+          "overall": 0,
+          "other": 1
+        },
+        "support": {
+          "pace": 0,
+          "clarity": 0,
+          "support": 269,
+          "workload": 0,
+          "assessment": 0,
+          "engagement": 0,
+          "resources": 0,
+          "overall": 0,
+          "other": 0
+        },
+        "workload": {
+          "pace": 0,
+          "clarity": 0,
+          "support": 0,
+          "workload": 261,
+          "assessment": 0,
+          "engagement": 0,
+          "resources": 0,
+          "overall": 0,
+          "other": 4
+        },
+        "assessment": {
+          "pace": 0,
+          "clarity": 0,
+          "support": 0,
+          "workload": 0,
+          "assessment": 231,
+          "engagement": 0,
+          "resources": 0,
+          "overall": 0,
+          "other": 55
+        },
+        "engagement": {
+          "pace": 0,
+          "clarity": 0,
+          "support": 0,
+          "workload": 0,
+          "assessment": 0,
+          "engagement": 311,
+          "resources": 0,
+          "overall": 17,
+          "other": 0
+        },
+        "resources": {
+          "pace": 0,
+          "clarity": 0,
+          "support": 0,
+          "workload": 0,
+          "assessment": 0,
+          "engagement": 0,
+          "resources": 176,
+          "overall": 0,
+          "other": 37
+        },
+        "overall": {
+          "pace": 0,
+          "clarity": 0,
+          "support": 0,
+          "workload": 0,
+          "assessment": 0,
+          "engagement": 0,
+          "resources": 0,
+          "overall": 191,
+          "other": 3
+        },
+        "other": {
+          "pace": 0,
+          "clarity": 0,
+          "support": 0,
+          "workload": 0,
+          "assessment": 0,
+          "engagement": 0,
+          "resources": 0,
+          "overall": 0,
+          "other": 0
+        }
+      },
+      "run_id": 1,
+      "method": "keyword",
+      "purity": 0.958,
+      "topic_coherence_npmi": null,
+      "n_topics": 9
+    },
+    {
+      "n": 2252,
+      "accuracy": 0.317,
+      "macro_f1": 0.261,
+      "weighted_f1": 0.276,
+      "per_class": {
+        "pace": {
+          "precision": 0.261,
+          "recall": 0.224,
+          "f1": 0.241,
+          "support": 295
+        },
+        "clarity": {
+          "precision": 0.253,
+          "recall": 0.627,
+          "f1": 0.36,
+          "support": 402
+        },
+        "support": {
+          "precision": 0.344,
+          "recall": 0.312,
+          "f1": 0.327,
+          "support": 269
+        },
+        "workload": {
+          "precision": 0.434,
+          "recall": 0.298,
+          "f1": 0.353,
+          "support": 265
+        },
+        "assessment": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 286
+        },
+        "engagement": {
+          "precision": 0.406,
+          "recall": 0.503,
+          "f1": 0.45,
+          "support": 328
+        },
+        "resources": {
+          "precision": 0.408,
+          "recall": 0.324,
+          "f1": 0.361,
+          "support": 213
+        },
+        "overall": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 194
+        },
+        "other": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0
+        }
+      },
+      "confusion": {
+        "pace": {
+          "pace": 66,
+          "clarity": 134,
+          "support": 30,
+          "workload": 0,
+          "assessment": 0,
+          "engagement": 65,
+          "resources": 0,
+          "overall": 0,
+          "other": 0
+        },
+        "clarity": {
+          "pace": 20,
+          "clarity": 252,
+          "support": 130,
+          "workload": 0,
+          "assessment": 0,
+          "engagement": 0,
+          "resources": 0,
+          "overall": 0,
+          "other": 0
+        },
+        "support": {
+          "pace": 36,
+          "clarity": 2,
+          "support": 84,
+          "workload": 55,
+          "assessment": 0,
+          "engagement": 92,
+          "resources": 0,
+          "overall": 0,
+          "other": 0
+        },
+        "workload": {
+          "pace": 0,
+          "clarity": 186,
+          "support": 0,
+          "workload": 79,
+          "assessment": 0,
+          "engagement": 0,
+          "resources": 0,
+          "overall": 0,
+          "other": 0
+        },
+        "assessment": {
+          "pace": 73,
+          "clarity": 139,
+          "support": 0,
+          "workload": 0,
+          "assessment": 0,
+          "engagement": 55,
+          "resources": 19,
+          "overall": 0,
+          "other": 0
+        },
+        "engagement": {
+          "pace": 16,
+          "clarity": 28,
+          "support": 0,
+          "workload": 39,
+          "assessment": 0,
+          "engagement": 165,
+          "resources": 80,
+          "overall": 0,
+          "other": 0
+        },
+        "resources": {
+          "pace": 42,
+          "clarity": 66,
+          "support": 0,
+          "workload": 7,
+          "assessment": 0,
+          "engagement": 29,
+          "resources": 69,
+          "overall": 0,
+          "other": 0
+        },
+        "overall": {
+          "pace": 0,
+          "clarity": 191,
+          "support": 0,
+          "workload": 2,
+          "assessment": 0,
+          "engagement": 0,
+          "resources": 1,
+          "overall": 0,
+          "other": 0
+        },
+        "other": {
+          "pace": 0,
+          "clarity": 0,
+          "support": 0,
+          "workload": 0,
+          "assessment": 0,
+          "engagement": 0,
+          "resources": 0,
+          "overall": 0,
+          "other": 0
+        }
+      },
+      "run_id": 2,
+      "method": "lda",
+      "purity": 0.412,
+      "topic_coherence_npmi": -0.308,
+      "n_topics": 10
+    }
+  ],
+  "sentiment_runs": [
+    {
+      "n": 2252,
+      "accuracy": 0.969,
+      "macro_f1": 0.938,
+      "weighted_f1": 0.968,
+      "per_class": {
+        "positive": {
+          "precision": 0.95,
+          "recall": 0.993,
+          "f1": 0.971,
+          "support": 1147
+        },
+        "neutral": {
+          "precision": 0.949,
+          "recall": 0.758,
+          "f1": 0.843,
+          "support": 248
+        },
+        "negative": {
+          "precision": 1.0,
+          "recall": 0.998,
+          "f1": 0.999,
+          "support": 857
+        }
+      },
+      "confusion": {
+        "positive": {
+          "positive": 1139,
+          "neutral": 8,
+          "negative": 0
+        },
+        "neutral": {
+          "positive": 60,
+          "neutral": 188,
+          "negative": 0
+        },
+        "negative": {
+          "positive": 0,
+          "neutral": 2,
+          "negative": 855
+        }
+      },
+      "run_id": 1,
+      "method": "lexicon",
+      "rating_spearman": 0.23,
+      "rating_n": 1113
+    }
+  ]
+}
