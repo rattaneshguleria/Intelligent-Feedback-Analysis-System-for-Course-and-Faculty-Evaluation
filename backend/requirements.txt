@@ -1,0 +1,13 @@
+fastapi>=0.110
+uvicorn[standard]>=0.29
+python-multipart>=0.0.9
+numpy
+scikit-learn>=1.3        # LDA baseline and BERTopic dependency
+# --- BERTopic stack (large download, ~2 GB with PyTorch). Install only when you reach
+# --- the BERTopic step; the keyword and LDA methods work without it:
+# bertopic>=0.16
+# sentence-transformers>=2.7
+# umap-learn
+# hdbscan
+# --- Optional, adds a named-entity layer to the anonymizer:
+#   pip install spacy && python -m spacy download en_core_web_sm
