@@ -9,7 +9,7 @@ Gold labels: **synthetic ground truth**, covering 2252 of 2320 stored clauses.
 | Method | Run | Clauses | Accuracy | Macro F1 | Weighted F1 | Purity | Topics | Coherence (NPMI) |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | keyword | 1 | 2252 | 0.934 | 0.957 | 0.961 | 0.958 | 9 | n/a |
-| lda | 2 | 2252 | 0.317 | 0.261 | 0.276 | 0.412 | 10 | -0.308 |
+| lda | 2 | 2252 | 0.317 | 0.262 | 0.276 | 0.412 | 10 | -0.308 |
 
 _Purity: share of clauses that fall in the majority gold theme of their topic. Coherence: mean NPMI of each topic's top keywords over all clauses (only meaningful for learned topics: LDA, BERTopic)._
 

@@ -174,7 +174,7 @@
     {
       "n": 2252,
       "accuracy": 0.317,
-      "macro_f1": 0.261,
+      "macro_f1": 0.262,
       "weighted_f1": 0.276,
       "per_class": {
         "pace": {
